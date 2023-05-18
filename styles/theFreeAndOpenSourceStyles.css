@@ -157,6 +157,23 @@ img {
 #photo-editing {
     background-color: rgb(120, 81, 121);
 }
+/*Css validator says this is wrong, but its working as intended.*/
+#main-navigation-block:has(#twoD-animation-link:hover) #twoD-animation {
+    background-color: rgb(48, 48, 48);
+}
+
+#main-navigation-block:has(#threeD-animation-link:hover) #threeD-animation {
+    background-color: rgb(48, 48, 48);
+}
+
+#main-navigation-block:has(#video-editing-link:hover) #video-editing {
+    background-color: rgb(48, 48, 48);
+}
+
+#main-navigation-block:has(#photo-editing-link:hover) #photo-editing {
+    background-color: rgb(48, 48, 48);
+}
+
 
 p {
     font-size: large;
