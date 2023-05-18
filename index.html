@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Free and Open Source</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles//theFreeAndOpenSourceStyles.css" />
+  </head>
+  <body>
+    <nav>
+      <!--This unordered list is the navigation bar. -->
+      <ul class="navigation-bar">
+        <li id="page-title"><a href="./index.html">Free (no asterisk)</a></li>
+        <!--The drop down item is the item you will hover over to display the list of other pages in the website.-->
+        <li class="drop-down-item">
+          <a href="./index.html">Recommended software</a>
+          <!--This is the list of other pages in the website that displays when hovering over the drop down item class.-->
+          <div class="hover-menu">
+            <ul>
+              <li><a href="./pages/twoDanimation.html">2D animation</a></li>
+              <li><a href="./pages/threeDanimation.html">3D animation</a></li>
+              <li><a href="./pages/videoEditing.html">Video editing</a></li>
+              <li><a href="./pages/photoEditing.html">Photo editing</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="drop-down-item"><a href="./pages/blog.html">Blog</a></li>
+        <li class="drop-down-item"><a href="./pages/savedPosts.html">Saved posts</a></li>
+        <li><a href="./pages/aboutMe.html">About me</a></li>
+      </ul>
+    </nav>
+    <!--This box is sized with bootstrap and is the main body content of each page. When the screen is small it takes up the full width of the screen.-->
+    <div class="container col-12 col-md-10">
+      <!--These are the four boxes in the main navigation pane. They are also sized with Bootstrap.-->
+      <div id="main-navigation-block" class="col-12 col-md-8">
+        <ul>
+          <!--These boxes each have an id to style them uniquely and they link to the other pages in the website.-->
+          <li class="col-5" id="twoD-animation">
+            <a class="block-link" href="./pages/twoDanimation.html"
+              >2D animation</a
+            >
+          </li>
+          <li class="col-5" id="threeD-animation">
+            <a class="block-link" href="./pages/threeDanimation.html"
+              >3D animation</a
+            >
+          </li>
+          <li class="col-5" id="video-editing">
+            <a class="block-link" href="./pages/videoEditing.html"
+              >Video editing</a
+            >
+          </li>
+          <li class="col-5" id="photo-editing">
+            <a class="block-link" href="./pages/photoEditing.html"
+              >Photo editing</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+      <!--This is the substance of the page.-->
+      <h1>What is Free (no asterisk)?</h1>
+      <p>
+        If you are a digital content creator, or are thinking about creating
+        digital content, you may have started looking into some software
+        solutions that you might use to create your content. There is a wide
+        variety of content creation programs available, some free, and some
+        quite expensive.
+      </p>
+      <p>
+        If you are just starting out and are low on capital, you might want to
+        start out creating content using free software. In this case, you are at
+        the right place, because I want to show you how to choose the right
+        software.
+      </p>
+      <p>
+        Some software programs advertise themselves to be free to use, only to
+        hit you with a paywall to use an essential feature. For example, a
+        software to edit videos might advertise itself to be free to use, only
+        for you to realise after you started using it that for commercial use,
+        your video needs to carry the watermark of the software. This is an
+        example of a free* software, where free is followed by an asterisk and
+        the software isn't actually free.
+      </p>
+      <p>
+        Free (no asterisk) is a website that aims to showcase free content
+        creation software that can be used comercially with no restrictions. We
+        look at 2D animation, 3D animation, video editing and photo editing.
+      </p>
+      <p>
+        We will mostly be looking at open source software. Open source software
+        is surprisingly feature rich, but sometimes the features feel slightly
+        more clunky than industry standard programs. These solutions therefore
+        often have slightly steeper learning curves, but almost always have the
+        same feature sets as their paid counterparts.
+      </p>
+      <h2>How to choose free content creation software</h2>
+      <p>
+        If perhaps there is a type of content not covered on this website, or
+        you just wish to start searching for software yourself, you can follow
+        these tips to make sure your software is free to use commercially with
+        no restrictions.
+      </p>
+      <!--Giving the class of standard list to make it similar to paragraph text.-->
+      <ul class="standard-list">
+        <li>
+          Choose open source software. If you look for open source software
+          instead of free software, you are more likely to get software that can
+          be used comercially.
+        </li>
+        <li>
+          Read up on the software before you commit. You don't want to hit a
+          paywall when it is too late and you have spent too much time on a
+          project.
+        </li>
+        <li>
+          Don't give up on an open source software too soon. They are often
+          feature rich and have good support online in forums.
+        </li>
+      </ul>
+      <hr />
+      <p>
+        I would love to hear from you. Please provide your name, email address
+        and a comment or question.
+      </p>
+      <!--This is the form that contains a set of radio buttons, a checkbox and a submit button.-->
+      <form id="contact-details-form">
+        <label for="name" class="col-6">Name:*</label>
+        <input id="name" class="col-6" type="text" required/>
+        <label for="email">Email:*</label>
+        <input id="email" type="email" required/>
+        <p class="form-paragraph-text"
+          >Which software would you like to learn?*</p
+        >
+        <div id="radio-container">
+          <div>
+            <input
+              type="radio"
+              id="opentoonz-radio-button"
+              name="software-selection"
+              value="OpenToonz"
+              required
+            />
+            <label for="opentoonz-radio-button">OpenToonz</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="blender-radio-button"
+              name="software-selection"
+              value="Blender"
+              required
+            />
+            <label for="blender-radio-button">Blender</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="davinci-radio-button"
+              name="software-selection"
+              value="DaVinci Resolve"
+              required
+            />
+            <label for="davinci-radio-button">DaVinci Resolve</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="gimp-radio-button"
+              name="software-selection"
+              value="GIMP"
+              required
+            />
+            <label for="gimp-radio-button">GIMP</label>
+          </div>
+        </div>
+        <p class="form-paragraph-text">Comment or question:</p>
+        <textarea id="comment-or-question"></textarea>
+        <div>
+          <input type="checkbox" id="subscribe" />
+          <label for="subscribe">I wish to receive updates.</label>
+        </div>
+
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

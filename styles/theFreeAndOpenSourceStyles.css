@@ -1,0 +1,427 @@
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/*This is a custom navigation bar class, the grid-template columns is dynamic based on screen size.*/
+.navigation-bar {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    gap: 20px;
+    
+}
+/*Styling the page title and aligning it to the left with a tiny bit of padding.*/
+#page-title {
+    display: block;
+    color: white;
+    font-size: xx-large;
+    flex: 2;
+    padding-left: 3vw;
+    font-weight: bold;
+}
+/*Adding hover effect to the page title to make sure the user knows its clickable.*/
+#page-title a:hover {
+    color: gray;
+}
+
+/*Giving padding to all anchor tags in the navigation bar.*/
+.navigation-bar li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.navigation-bar li {
+    flex: 1;
+}
+/*There is a slightly different hover effect than the title for other list items.*/
+.navigation-bar li a:hover {
+    font-weight: bold;
+}
+/*A different hover effect for links inside of the drop down list.*/
+.drop-down-item li a:hover {
+    color: white;
+    font-weight: normal;
+}
+/*Removing styling from the unordered list in the dropdown menu*/
+.hover-menu ul{
+    list-style: none;
+    display: block;
+    padding-left: 0;
+}
+/*Moving the hover menu slightly more towards the center of the "recommended software" link and hiding it initially. This margin is removed on small screens in a below media query.*/
+.hover-menu {
+    display: none;
+    background-color: gray;
+    margin-left: 1.5rem;
+    font-size: larger;
+}
+/*Adding some padding and border to drop-down items*/
+.hover-menu ul li {
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(154, 154, 154);
+}
+/*Changing the color of links in the drop-down to be initially black.*/
+.hover-menu ul li a {
+    color: black;
+}
+
+/*When recommended software becomes bold, I don't want the rest of the items to go bold, so I unbold them here. I also change the position to absolute to let it drop down from the word.*/
+.drop-down-item:hover .hover-menu {
+    display: block;
+    position: absolute;
+    font-weight: normal;
+}
+/*This keeps the bolded state of the recommended software link.*/
+.drop-down-item:hover {
+    font-weight: bold;
+}
+/*Center aligning and resizing images.*/
+.image {
+    text-align: center;
+}
+img {
+    width: 30%;
+}
+/*Responsive design not using Bootstrap. Mostly for the navigation bar and image scaling.*/
+
+@media (max-width: 1000px) {
+    /*Scaling images based on screen size as well.*/
+    img {
+        width: 50%;
+    }
+}
+@media (max-width: 500px) {
+    .navigation-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    img {
+    /*Scaling images based on screen size as well.*/
+        width: 80%;
+    } 
+}
+/*Using a very opaque gray background to show the body of the page lightly.*/
+.container {
+    background-color: rgba(221, 221, 221, 0.155);
+}
+/*Centering main navigation block, which is the one that contains the four buttons.*/
+#main-navigation-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Styling the blocks together.*/
+#main-navigation-block ul {
+    flex-flow: row;
+    flex-wrap: wrap;
+    display: inline-flex;
+    list-style: none;
+    gap: 1rem;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+#main-navigation-block ul li {
+    text-align: center;
+    font-size: xx-large;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: rgb(46, 46, 46);
+    border-radius: 1rem;
+}
+#main-navigation-block ul a {
+    text-decoration: none;
+    color: black;
+    
+}
+/*Mouseover effect for the main navigation block for its text colour.*/
+#main-navigation-block a:hover {
+    color: white;
+}
+/*Adding separate background colours.*/
+#twoD-animation {
+    background-color: rgb(126, 121, 112);
+}
+#threeD-animation {
+    background-color: rgb(110, 124, 102);
+}
+#video-editing {
+    background-color: rgb(97, 117, 131);
+}
+#photo-editing {
+    background-color: rgb(120, 81, 121);
+}
+
+p {
+    font-size: large;
+}
+.standard-list {
+    font-size: large;
+}
+
+
+/*Center aligning table captions.*/
+caption {
+    text-align: center;
+    font-size: large;
+}
+/*Styling the table and centering it on the page.*/
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    border-style: solid;
+    padding: 10px;
+    font-size: larger;
+    border-style: solid;
+    border-width: 2px;
+}
+
+th {
+    border-bottom-width: 5px;
+    border-bottom-style: double;
+    background-color: rgb(159, 159, 159);
+    font-weight: bold;
+}
+/*Making the left table column stand out.*/
+.left-table-column {
+    background-color: rgb(209, 209, 209);
+    font-weight: bold;
+}
+/*Some display options for the form.*/
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-style: solid;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: gray;
+    margin-bottom: 20px;
+}
+
+.form-paragraph-text {
+    font-size: medium;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#submit-button {
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#submit-button:hover {
+    background-color: darkgray;
+    color: white;
+    border-color: gray;
+}
+/*Making the form responsive.*/
+@media (max-width: 600px) {
+    form {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+/*adding padding and margin to the set of radio buttons.*/
+#radio-container {
+    margin-left: 5%;
+    margin-bottom: 15px;
+}
+/*Styling the blockquote.*/
+blockquote {
+    border-color: gray;
+    border-width: 2px;
+    border-style: dotted;
+    text-align: right;
+    width: 40%;
+    padding: 40px;
+    border-radius: 60px;
+    font-size: larger;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Making the blockquote responsive.*/
+@media (max-width: 1000px) {
+    blockquote {
+        margin-left: 60%
+    }
+}
+
+.blog-post-body {
+    font-size: large;
+}
+.blog-post-header {
+    font-size: xx-large;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.blog-post-title{
+    max-width: 80%;
+}
+
+.blog-post-date {
+    font-style: italic;
+    color: gray;
+}
+
+.blog-post {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.save-post-button {
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(138, 194, 138);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(4, 121, 4);
+    user-select: none;
+}
+
+.save-post-button:hover {
+    cursor: pointer;
+    background-color: rgb(4, 121, 4);
+    color: rgb(193, 225, 190);
+}
+
+.already-in-database{
+    color: gray;
+}
+
+.button-already-in-database {
+    background-color: gray;
+    color: white;
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+}
+
+.remove-saved-post-button {
+    flex: 1;
+    font-size: larger;
+    background-color: rgb(218, 157, 157);
+    color: rgb(105, 55, 55);
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    user-select: none;
+    align-self: flex-start;
+}
+.remove-saved-post-button:hover {
+    background-color: rgb(105, 55, 55);
+    color: rgb(218, 157, 157);
+    cursor: pointer;
+}
+
+details {
+    flex: 3;
+}
+
+summary {
+    user-select: none;
+    font-size: x-large;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.removal-division {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid rgb(180, 180, 180);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(237, 237, 237);
+}
+
+.removal-division:hover {
+    background-color: rgb(207, 239, 255);
+}
+
+body{
+    font-size: larger;
+}
+.saved-post-content {
+    font-size: larger;
+    margin-left: 5%;
+}
+
+.like-form {
+    display: flex;
+    margin-left: auto;
+    margin-right: 3%;
+    text-align: center;
+    border-style: none;
+    padding: 0;
+    border-radius: 30px;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    justify-content: center;
+    background-color: rgb(198, 211, 212);
+}
+
+.like-form:hover {
+    background-color: rgb(135, 185, 135);
+    cursor: pointer;
+}
+
+.already-liked {
+    display: flex;
+    margin-left: auto;
+    margin-right: 3%;
+    text-align: center;
+    border-style: none;
+    padding: 0;
+    border-radius: 30px;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    justify-content: center;
+    background-color: #567a5c;
+    cursor: pointer;
+}
+
+.comment-username {
+    font-weight: bold;
+}
