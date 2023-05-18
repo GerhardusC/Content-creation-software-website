@@ -123,12 +123,8 @@ const savePost = (e) => {
     if (!clickedPost.saved) {
         savedPosts.push(clickedPost);
         sessionStorage.setItem("savedPosts", JSON.stringify(savedPosts));
-    } else (
-        //Otherwise mention that the post is already in the database and tell the user how to remove the post.
-        alert("This post is already in the database. To remove it, navigate to the 'saved posts' page.")
-    )
-    //As per the brief, telling the user how many items they have saved for later.
-    alert(`You currently have ${savedPosts.length} items saved for later.`)
+    }
+
 }
 
 //Adding save post event liteners to the save post buttons.
@@ -242,13 +238,3 @@ if (document.getElementById("contact-details-form") != null){
     document.getElementById("contact-details-form").addEventListener("submit", collectUserInformation)
 }
 
-const changeLinkStyle = (e) => {
-    e.target.parentElement.parentElement.style.backgroundColor = "gray"
-    console.log("I ran.")
-}
-
-let blockLinks = document.querySelectorAll("block-link");
-
-for(let i = 0; i < blockLinks.length; i++){
-    blockLinks[i].addEventListener("mouseover", changeLinkStyle)
-}
